@@ -1,0 +1,22 @@
+#啟動環境
+spring:
+  profiles:
+    active:
+    - dev
+
+
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

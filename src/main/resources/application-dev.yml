@@ -1,0 +1,35 @@
+profileName: dev
+
+server:
+  port: 8080
+  servlet:    context-path: /reborn_new_life
+
+logging:  level:
+    root: error
+    
+spring:
+  datasource:
+     driver-class-name: com.mysql.cj.jdbc.Driver 
+     url: jdbc:mysql://aws-first-database.ckkpuswf8ke8.ap-southeast-2.rds.amazonaws.com:3306/new_shopping?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+     username: admin
+     password: mm12583$
+  session:    jdbc:
+      table-name: SPRING_SESSION
+#      initialize-schema: always #產spring session schema
+  banner:
+    charset: UTF-8    location: classpath:banner.txt
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
