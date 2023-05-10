@@ -1,10 +1,10 @@
-package com.reborn.newlife.basic;
+package com.reborn.newlife.base.basecomponent;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
-public class AppConfig {
+public class AppConfig { 
 	
 	public enum ACTIVE_PROFILE{
 		PROD, DEV, NON
