@@ -16,3 +16,7 @@
 ### Swagger Url
 
 * http://localhost:8080/reborn_new_life/swagger-ui/
+
+### Druid Url
+
+* http://localhost:8080/reborn_new_life/druid/
