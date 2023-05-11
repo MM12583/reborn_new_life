@@ -98,11 +98,19 @@
 			<artifactId>springfox-boot-starter</artifactId>
 			<version>3.0.0</version>
 		</dependency>
+		
 		<dependency>
     		<groupId>io.springfox</groupId>
     		<artifactId>springfox-swagger-ui</artifactId>
     		<version>3.0.0</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>1.2.16</version>
+		</dependency>
+		
 	</dependencies>
 	
 	<dependencyManagement>
@@ -118,7 +126,6 @@
 	</dependencyManagement>
 
 	<build>
-
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -148,8 +155,9 @@
 				</executions>
 			</plugin>
 		</plugins>
-
 	</build>
+	
+	
 	
 	<!-- 環境設定 -->
 	<profiles>

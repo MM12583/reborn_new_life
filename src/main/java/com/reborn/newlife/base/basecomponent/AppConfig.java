@@ -10,7 +10,7 @@ public class AppConfig {
 		PROD, DEV, NON
 	}
 	
-	@Value("${profileName}")
+	@Value("${spring.profiles.active}")
 	private String activeProfile;
 	
 	public ACTIVE_PROFILE getActiveProfile() {

@@ -1,11 +1,12 @@
 #啟動環境
 spring:
   profiles:
-    active:
-    - dev
+    active: dev
   mvc:    pathmatch:      matching-strategy: ant-path-matcher
-    
-
+  banner:
+    charset: UTF-8
+    location: classpath:banner.txt  
+  
 
       
     
