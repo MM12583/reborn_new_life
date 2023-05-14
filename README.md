@@ -24,9 +24,4 @@
 
 * Api 須加 Swagger tag
 * Controller 須繼承 BaseNewLife
-```
-@Api(tags = "Hello 首頁")
-@Controller
-public class HelloController extends BaseNewLife 
-```
 * Entity 類別須加上 Annotation : @EntityListeners(EntityLogListener.class)
