@@ -3,7 +3,7 @@
 ### 開發環境
 
 *  Spring Boot 2.7.11
-*  JDK 17
+*  JDK 14 at least
 *  Database AWS RDS
 
 ### Git flow
