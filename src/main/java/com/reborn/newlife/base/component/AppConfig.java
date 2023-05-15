@@ -1,4 +1,4 @@
-package com.reborn.newlife.base.basecomponent;
+package com.reborn.newlife.base.component;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

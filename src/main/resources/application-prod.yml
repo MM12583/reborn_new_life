@@ -4,7 +4,7 @@ server:
     session:      timeout: 120m
 
 logging:  level:
-    root: info
+    root: error
    
 spring:
   session:

@@ -93,6 +93,7 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- 以下額外新增 -->
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-boot-starter</artifactId>
@@ -110,6 +111,7 @@
 			<artifactId>druid-spring-boot-starter</artifactId>
 			<version>1.2.16</version>
 		</dependency>
+		
 		
 	</dependencies>
 	
