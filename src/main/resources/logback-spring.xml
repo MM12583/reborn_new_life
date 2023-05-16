@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<contextName>logback</contextName>
+	
+	<!-- 文件切割大小 -->
+	<property name="maxFileSize" value="10MB" />
+	<!-- 文檔保留天数 -->
+	<property name="maxHistory" value="5" />
+	<!-- 文檔保留大小 -->
+	<property name="totalSizeCap" value="50MB" />
+	<!-- 儲存目錄 -->
+	<property name="log.path" value="D:/reborn_new_life_log" />
+
+	
+	<!--console -->
+	<appender name="CONSOLE"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>info</level>
+		</filter>
+		<encoder>
+			<Pattern>%date{yyyy-MM-dd HH:mm:ss} -%5level [%15.15thread]%-40.40logger{39} : %msg%n</Pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+	</appender>
+	
+	<!-- INFO log -->
+	<appender name="INFO_FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<!-- 檔名 -->
+		<file>${log.path}/web_info.log</file>
+		<!--格式 -->
+		<encoder>
+			<pattern>%date{yyyy-MM-dd HH:mm:ss} -%5level [%15.15thread]%-40.40logger{39} : %msg%n</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+		<!-- 日志歸檔 -->
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log.path}/web-info-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>10MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+			<!--保留天數 -->
+			<maxHistory>5</maxHistory>
+		</rollingPolicy>
+		<!-- level debug -->
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>info</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+	</appender>
+
+	<!-- ERROR log -->
+	<appender name="ERROR_FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<!-- 檔名 -->
+		<file>${log.path}/web_error.log</file>
+		<!--格式 -->
+		<encoder>
+			<pattern>%date{yyyy-MM-dd HH:mm:ss} -%5level [%15.15thread]%-40.40logger{39} : %msg%n</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+		<!-- 日志歸檔 -->
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log.path}/web-error-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>10MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+			<!--保留天數 -->
+			<maxHistory>5</maxHistory>
+		</rollingPolicy>
+		<!-- level debug -->
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>error</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+	</appender>
+
+	<root level="error">
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="INFO_FILE" />
+		<appender-ref ref="ERROR_FILE" />
+	</root>
+
+
+</configuration>

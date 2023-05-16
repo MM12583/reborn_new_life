@@ -6,9 +6,6 @@ spring:
   banner:
     charset: UTF-8
     location: classpath:banner.txt  
-  
-logging:  pattern:    console: "%date{yyyy-MM-dd HH:mm:ss} -%5level [%15.15thread] %-40.40logger{39} : %msg%n"
-      
     
     
     
