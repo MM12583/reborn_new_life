@@ -4,12 +4,15 @@ server:
     context-path: /reborn_new_life
     session:
       timeout: 120m
+<<<<<<< HEAD
   tomcat:
     threads:
       min-spare: 5
       max: 10
     max-connections: 15
     accept-count: 10  
+=======
+>>>>>>> 612308d (add log appender & BaseJpaRepository & config JDK 14)
    
 spring:
   session:
@@ -62,9 +65,13 @@ spring:
     open-in-view: false
     hibernate:
       ddl-auto: none
+<<<<<<< HEAD
   devtools:
     restart:
       enabled: false
+=======
+
+>>>>>>> 612308d (add log appender & BaseJpaRepository & config JDK 14)
 
 logging:
   config: classpath:logback-spring.xml
