@@ -24,4 +24,5 @@
 
 * Api 須加 Swagger tag
 * Controller 須繼承 BaseNewLife
+* Repository 須繼承 BaseJpaRepository
 * Entity 類別須加上 Annotation : @EntityListeners(EntityLogListener.class)
