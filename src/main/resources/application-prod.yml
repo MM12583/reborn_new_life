@@ -1,10 +1,9 @@
 server:
   port: 80
-  servlet:    context-path: /reborn_new_life
-    session:      timeout: 120m
-
-logging:  level:
-    root: error
+  servlet:
+    context-path: /reborn_new_life
+    session:
+      timeout: 120m
    
 spring:
   session:
@@ -12,10 +11,13 @@ spring:
       table-name: SPRING_SESSION
       #initialize-schema: always #產spring session schema
   datasource:
-    druid:      driver-class-name: com.mysql.cj.jdbc.Driver 
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver 
       url: jdbc:mysql://aws-first-database.ckkpuswf8ke8.ap-southeast-2.rds.amazonaws.com:3306/new_shopping?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
-      username: admin      password: mm12583$
-      # 連線池大小      initial-size: 2
+      username: admin
+      password: mm12583$
+      # 連線池大小
+      initial-size: 2
       min-idle: 2
       max-active: 5
       max-wait: 2000
@@ -51,8 +53,21 @@ spring:
         login-password: 12345
   jpa:
     show-sql: false
-    open-in-view: false    hibernate:      ddl-auto: none
-      
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+
+
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    entitySQL: info
+    baseController: info
+  group:
+    # controller
+    baseController: com.reborn.newlife.home.controller
+    # database SQL
+    entitySQL: com.reborn.newlife.XXX.entity
     
     
     

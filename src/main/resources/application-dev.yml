@@ -2,17 +2,6 @@ server:
   port: 8080
   servlet:    context-path: /reborn_new_life
     session:      timeout: 120m
-
-logging:
-  level:
-    root: error
-    entitySQL: info
-    baseController: info
-  group:
-    # controller
-    baseController: com.reborn.newlife.home.controller
-    # database SQL
-    entitySQL: com.reborn.newlife.XXX.entity
    
 spring:
   session:
@@ -60,7 +49,18 @@ spring:
   jpa:
     show-sql: false
     open-in-view: false    hibernate:      ddl-auto: none
-      
+
+
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    entitySQL: info
+    baseController: info
+  group:
+    # controller
+    baseController: com.reborn.newlife.home.controller
+    # database SQL
+    entitySQL: com.reborn.newlife.XXX.entity
     
     
     
