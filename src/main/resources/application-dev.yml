@@ -2,7 +2,13 @@ server:
   port: 8080
   servlet:    context-path: /reborn_new_life
     session:      timeout: 120m
-   
+  tomcat:    threads:      min-spare: 5
+      max: 10
+    # 同時可處裡最大請求 = 15 + 10 (第26開始，如前面沒處理完 則依時間 connection timeout)
+    max-connections: 15
+    # 最大等待數
+    accept-count: 10 
+    
 spring:
   session:
     jdbc:
@@ -49,7 +55,8 @@ spring:
   jpa:
     show-sql: false
     open-in-view: false    hibernate:      ddl-auto: none
-
+  devtools:    restart:
+      enabled: true      additional-paths: src/main/java
 
 logging:
   config: classpath:logback-spring.xml

@@ -4,6 +4,12 @@ server:
     context-path: /reborn_new_life
     session:
       timeout: 120m
+  tomcat:
+    threads:
+      min-spare: 5
+      max: 10
+    max-connections: 15
+    accept-count: 10  
    
 spring:
   session:
@@ -56,7 +62,9 @@ spring:
     open-in-view: false
     hibernate:
       ddl-auto: none
-
+  devtools:
+    restart:
+      enabled: false
 
 logging:
   config: classpath:logback-spring.xml
