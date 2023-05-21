@@ -11,7 +11,7 @@
 * master  : 正式，devlop 測試後上
 * hotfix  : master 仍有問題，臨時修復
 * develop  : 開發區
-* feature : devlop 分出開發功能
+* feature : develop 分出開發功能
 
 ### Swagger Url
 
