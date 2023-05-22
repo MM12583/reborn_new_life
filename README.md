@@ -28,3 +28,4 @@
 * Service 盡量寫上 UnitTest
 * Repository 須繼承 BaseJpaRepository
 * Entity 類別須加上 Annotation : @EntityListeners(EntityLogListener.class)
+* 工具類 放 base.util
