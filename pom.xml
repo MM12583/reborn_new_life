@@ -93,26 +93,6 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-				<dependency>
-    		<groupId>org.junit.jupiter</groupId>
-    		<artifactId>junit-jupiter-engine</artifactId>
-    		<scope>test</scope>
-		</dependency>
-		<dependency>
-    		<groupId>org.mockito</groupId>
-    		<artifactId>mockito-core</artifactId>
-    		<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.querydsl</groupId>
-			<artifactId>querydsl-apt</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.querydsl</groupId>
-			<artifactId>querydsl-jpa</artifactId>
-		</dependency>
-		
 		<!-- 以下額外新增 -->
 		<dependency>
 			<groupId>io.springfox</groupId>
@@ -133,9 +113,14 @@
 		</dependency>
 		
 		<dependency>
-    		<groupId>org.springframework.security</groupId>
-    		<artifactId>spring-security-jwt</artifactId>
-    		<version>1.1.1.RELEASE</version>
+			<groupId>com.querydsl</groupId>
+			<artifactId>querydsl-apt</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.querydsl</groupId>
+			<artifactId>querydsl-jpa</artifactId>
 		</dependency>
 		
 	</dependencies>

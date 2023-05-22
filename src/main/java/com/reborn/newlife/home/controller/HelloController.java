@@ -19,7 +19,7 @@ public class HelloController extends BaseNewLife {
 		return "index.html";
 	}
 	
-	@ApiOperation(value = "執行環境", httpMethod = "GET")
+	@ApiOperation("執行環境")
 	@ResponseBody
 	@GetMapping(path = "/appconfig")
 	public String getAppConfig() {
