@@ -1,4 +1,4 @@
-package com.reborn.newlife.home.controller;
+package com.reborn.newlife.base.util;
 
 import org.springframework.beans.factory.config.YamlPropertiesFactoryBean;
 import org.springframework.core.io.ClassPathResource;
@@ -12,7 +12,9 @@ import java.sql.Connection;
 import java.sql.Statement;
 import java.util.Properties;
 
+// 僅 Create Table
 public class InitialData {
+	
 	public static void main(String[] args) {
 		 // 讀取 YAML 檔案並取得資料庫相關屬性
         Properties properties = readYamlFile("application-dev.yml");
