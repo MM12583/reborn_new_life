@@ -1,3 +1,4 @@
+--Create Table
 DROP TABLE IF EXISTS `Acquisition`;
 CREATE TABLE `Acquisition` (
   `id` int(8) unsigned zerofill NOT NULL AUTO_INCREMENT,
