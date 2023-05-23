@@ -15,7 +15,7 @@ public class HelloController extends BaseNewLife {
 	
 	@GetMapping(path = "/")
 	public String hello() {
-		log.info("歡迎來到首頁!");
+		log.info("歡迎來到首頁 !! ");
 		return "index.html";
 	}
 	
@@ -23,7 +23,7 @@ public class HelloController extends BaseNewLife {
 	@ResponseBody
 	@GetMapping(path = "/appconfig")
 	public String getAppConfig() {
-		log.info("取得執行環境!");
+		log.info("取得執行環境 !! ");
 		return "正在執行環境 : " + getAppcationConfig().getActiveProfile();
 		
 	}
