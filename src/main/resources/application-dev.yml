@@ -65,9 +65,9 @@ logging:
     baseController: info
   group:
     # controller
-    baseController: com.reborn.newlife.home.controller
+    baseController: com.reborn.newlife.home.controller, com.reborn.newlife.store.controller
     # database SQL
-    entitySQL: com.reborn.newlife.XXX.entity
+    entitySQL: com.reborn.newlife.store.entity
     
     
     

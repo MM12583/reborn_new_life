@@ -153,6 +153,8 @@ CREATE TABLE `NewProduct` (
   `price` decimal(6,0) DEFAULT NULL,
   `purchasePrice` decimal(6,0) DEFAULT NULL,
   `stock` int DEFAULT NULL,
+  `createBy` varchar(255) DEFAULT 'SYSBATCH',
+  `createDt` timestamp DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 

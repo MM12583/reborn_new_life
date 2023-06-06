@@ -10,9 +10,10 @@ import org.springframework.data.querydsl.SimpleEntityPathResolver;
 public abstract class BaseJpaRepository<T, ID> extends SimpleJpaRepository<T, ID> {
 
     public EntityManager em;
+    
     protected final QuerydslJpaPredicateExecutor<T> jpaPredicateExecutor;
 
-    BaseJpaRepository(Class<T> domainClass, EntityManager em) {
+    protected BaseJpaRepository(Class<T> domainClass, EntityManager em) {
         super(domainClass, em);
         this.em = em;
         this.jpaPredicateExecutor = 
