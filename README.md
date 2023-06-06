@@ -4,6 +4,7 @@
 * Spring Boot 2.7.11
 * JDK 14
 * Junit 5
+* IDE install lombok
 * Database AWS RDS
 
 ### Git flow
