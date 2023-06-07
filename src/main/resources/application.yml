@@ -6,7 +6,11 @@ spring:
   banner:
     charset: UTF-8
     location: classpath:banner.txt  
-    
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  
     
     
     

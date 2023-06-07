@@ -24,7 +24,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 @SuppressWarnings("serial")
-@Table(name = "NewProduct", schema = "")
+@Table(name = "NewProduct")
 @Entity
 @EntityListeners(EntityLogListener.class)
 @Getter
