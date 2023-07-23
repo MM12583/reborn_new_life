@@ -19,7 +19,7 @@ spring:
   datasource:
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver 
-      url: jdbc:mysql://aws-first-database.ckkpuswf8ke8.ap-southeast-2.rds.amazonaws.com:3306/new_shopping?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+      url: jdbc:mysql://aws-first-database.ckkpuswf8ke8.ap-southeast-2.rds.amazonaws.com:3306/reborn_new_life?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
       username: admin
       password: mm12583$
       # 連線池大小

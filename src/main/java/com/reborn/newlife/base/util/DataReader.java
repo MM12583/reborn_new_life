@@ -15,13 +15,15 @@ import java.util.List;
 import javax.sql.rowset.serial.SerialBlob;
 import javax.sql.rowset.serial.SerialClob;
 
-import com.reborn.newlife.base.entity.NewProductBean;
+import com.reborn.newlife.store.entity.NewProductBean;
 
 public class DataReader {
-	public List<NewProductBean> readDataFromFile(String fileName) {
+	
+	public List<NewProductBean> readDataFromFile(File file) {
+		
 		List<NewProductBean> products = new ArrayList<>();
 
-		try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
+		try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
 			String line;
 			while ((line = reader.readLine()) != null) {
 				NewProductBean product = parseLine(line);
@@ -35,9 +37,10 @@ public class DataReader {
 	}
 
 	private NewProductBean parseLine(String line) {
+		
 		String[] token = line.split("\\|");
-		String realPath = "C:/workby/reborn_new_life/src/main/resources";
 		NewProductBean product = new NewProductBean();
+		
 		try {
 
 			product.setName(token[0]);
@@ -66,7 +69,7 @@ public class DataReader {
 			product.setCnfileName(extractFileName(token[12].trim()));
 		
 		} catch (Exception e) {
-			// TODO: handle exception
+			System.out.println(e.getMessage());
 		}
 		return product;
 	}
